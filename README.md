@@ -78,7 +78,18 @@ Gambar panduan menunjukkan pilihan engine, lokasi arsip input, dan folder output
 
 ![Panduan Extract Script dari data01000 ke data01000_json dengan engine BGI / Ethornell](docs/images/02-extract-data01000-json.png)
 
-Langkah unpack dan ekstraksi JSON ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
+### Langkah 3: Rename arsip asli menjadi `data01000_original.arc`
+
+Setelah unpack dan ekstraksi JSON selesai, ubah nama berkas `data01000.arc` asli yang digunakan pada langkah pertama menjadi **`data01000_original.arc`**. Simpan berkas tersebut sebagai cadangan agar arsip asli tetap tersedia saat membuat arsip hasil patch.
+
+```text
+Sebelum: data01000.arc
+Sesudah: data01000_original.arc
+```
+
+Folder hasil unpack tetap bernama `data01000`, dan folder hasil ekstraksi JSON tetap bernama `data01000_json`.
+
+Langkah unpack, ekstraksi JSON, dan pencadangan arsip ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
 
 ## Status dan batas kompatibilitas
 
