@@ -1,0 +1,6 @@
+# Local extraction and temporary work files
+/BijikTools-v0.5beta1-fixed/
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini

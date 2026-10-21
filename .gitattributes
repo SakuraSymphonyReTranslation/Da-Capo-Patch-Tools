@@ -1,0 +1,7 @@
+* text=auto
+*.md text eol=lf
+*.rar binary
+*.arc binary
+*.bak binary
+*.gdb binary
+*.sud binary
