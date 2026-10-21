@@ -89,7 +89,44 @@ Sesudah: data01000_original.arc
 
 Folder hasil unpack tetap bernama `data01000`, dan folder hasil ekstraksi JSON tetap bernama `data01000_json`.
 
-Langkah unpack, ekstraksi JSON, dan pencadangan arsip ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
+### Langkah 4: Edit JSON untuk menerjemahkan teks
+
+**Format JSON disarankan untuk mengedit dan menerjemahkan teks script.** Buka folder `data01000_json` di editor teks seperti Visual Studio Code, lalu buka berkas `.json` yang ingin diterjemahkan, misalnya `0223a_f02.json`.
+
+1. Terjemahkan nilai teks sesuai konteks. Pada hasil ekstraksi yang ditunjukkan, `name` dapat berisi narasi atau pilihan, sedangkan objek dialog dapat memiliki `name` untuk nama pembicara dan `message` untuk isi dialog.
+2. Pertahankan nama key, urutan dan jumlah entri, serta struktur JSON. Perhatikan tanda kutip, koma, dan escape seperti `\n` atau `\"` agar berkas tetap valid.
+3. Periksa teks yang memiliki spasi berlebih secara cermat dan rapikan manual bila diperlukan. Contoh entri yang perlu diperiksa:
+
+   ```json
+   [
+     {
+       "name": "                         .\n                         .\n                         ."
+     },
+     {
+       "name": "                         .\n                         .\n                         ."
+     }
+   ]
+   ```
+
+   Jika spasi tersebut tidak diperlukan untuk tampilan teks, hapus spasi berlebih di dalam nilainya. Contoh hasil perapian dengan titik dan pergantian baris tetap dipertahankan:
+
+   ```json
+   [
+     {
+       "name": ".\n.\n."
+     },
+     {
+       "name": ".\n.\n."
+     }
+   ]
+   ```
+
+   Periksa juga entri yang hanya berisi spasi atau pergantian baris. Tentukan perbaikannya berdasarkan konteks dan tampilan di game; jangan menghapus semua spasi atau entri secara massal.
+4. Simpan hasil terjemahan di folder `data01000_json` dan pastikan editor tidak melaporkan kesalahan sintaks JSON.
+
+![Mengedit JSON hasil ekstraksi di Visual Studio Code dan memeriksa spasi berlebih](docs/images/04-edit-json-translation.png)
+
+Langkah unpack, ekstraksi JSON, pencadangan arsip, dan penyuntingan teks ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
 
 ## Status dan batas kompatibilitas
 
