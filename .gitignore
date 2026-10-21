@@ -1,5 +1,6 @@
 # Local extraction and temporary work files
 /BijikTools-v0.5beta1-fixed/
+/work/
 *.tmp
 *.log
 Thumbs.db
