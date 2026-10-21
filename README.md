@@ -35,7 +35,7 @@ Paket BijikTools menyertakan `BijikTools.exe`, `BijikTools.dll`, `BijikTools.ori
 
 2. Ekstrak `BijikTools-v0.5beta1-fixed.rar` dengan seluruh isinya. Pertahankan DLL dan folder `external` bersama executable.
 3. Pasang .NET 8 Desktop Runtime bila belum tersedia, lalu jalankan `BijikTools.exe` dari folder hasil ekstraksi.
-4. Buat salinan arsip dan database sebelum mengedit, lalu ikuti langkah unpack di bawah untuk mengekstrak `data01000.arc`.
+4. Buat salinan arsip dan database sebelum mengedit, lalu ikuti panduan di bawah untuk unpack `data01000.arc` dan mengekstrak script menjadi JSON.
 5. Untuk pengujian di game, tutup game terlebih dahulu dan cadangkan berkas yang akan diganti. Terapkan hasil kerja pada instalasi uji yang sesuai, lalu periksa pemuatan skenario, tampilan teks, pilihan dialog, dan fungsi save/load.
 
 ## Panduan BijikTools
@@ -60,7 +60,25 @@ Paket BijikTools menyertakan `BijikTools.exe`, `BijikTools.dll`, `BijikTools.ori
 
 Gambar panduan menunjukkan pilihan engine, lokasi arsip input, dan folder output. Sesuaikan lokasi folder dengan instalasi atau folder kerja masing-masing.
 
-Langkah unpack ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
+### Langkah 2: Extract script dari `data01000` menjadi JSON di `data01000_json`
+
+**Tetap gunakan `Engine Target`: `BGI / Ethornell`.** Gunakan folder `data01000` hasil unpack pada langkah pertama sebagai input.
+
+1. Buka menu **Extract Script** di sisi kiri BijikTools.
+2. Pada **Folder Script (Input)**, pilih folder `data01000` yang berisi berkas hasil unpack.
+3. Pada **Folder Output (json)**, pilih lokasi folder terpisah bernama `data01000_json`. Contoh pasangan input dan output:
+
+   ```text
+   Input : C:\DaCapo\Hasil Extract\data01000
+   Output: C:\DaCapo\Hasil Extract\data01000_json
+   ```
+
+4. Klik **Gas Extract!** untuk mengonversi script dari folder input menjadi berkas JSON di folder output.
+5. Tunggu sampai proses selesai, lalu periksa berkas JSON di dalam `data01000_json`. Folder `data01000` digunakan untuk script hasil unpack, sedangkan `data01000_json` digunakan untuk hasil konversi JSON.
+
+![Panduan Extract Script dari data01000 ke data01000_json dengan engine BGI / Ethornell](docs/images/02-extract-data01000-json.png)
+
+Langkah unpack dan ekstraksi JSON ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
 
 ## Status dan batas kompatibilitas
 
