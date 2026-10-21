@@ -35,10 +35,32 @@ Paket BijikTools menyertakan `BijikTools.exe`, `BijikTools.dll`, `BijikTools.ori
 
 2. Ekstrak `BijikTools-v0.5beta1-fixed.rar` dengan seluruh isinya. Pertahankan DLL dan folder `external` bersama executable.
 3. Pasang .NET 8 Desktop Runtime bila belum tersedia, lalu jalankan `BijikTools.exe` dari folder hasil ekstraksi.
-4. Buat salinan arsip dan database sebelum mengedit. Gunakan salinan kerja `data01000.arc` atau `system.arc` untuk eksplorasi ekstraksi dan repack dengan opsi BGI yang tersedia pada tool.
+4. Buat salinan arsip dan database sebelum mengedit, lalu ikuti langkah unpack di bawah untuk mengekstrak `data01000.arc`.
 5. Untuk pengujian di game, tutup game terlebih dahulu dan cadangkan berkas yang akan diganti. Terapkan hasil kerja pada instalasi uji yang sesuai, lalu periksa pemuatan skenario, tampilan teks, pilihan dialog, dan fungsi save/load.
 
-Nama menu, parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
+## Panduan BijikTools
+
+### Langkah 1: Unpack `data01000.arc` ke folder `data01000`
+
+**Pastikan `Engine Target` dipilih sebagai `BGI / Ethornell`.**
+
+1. Buka menu **Archive Tool** di sisi kiri BijikTools.
+2. Pada **Archive File (Unpack) / Folder (Pack)**, klik **File...** dan pilih berkas `data01000.arc` yang akan diekstrak.
+3. Pada **Output Path**, isi lokasi folder tujuan bernama `data01000`, tanpa ekstensi `.arc`. Contoh pasangan input dan output:
+
+   ```text
+   Input : C:\DaCapo\Hasil Extract\data01000.arc
+   Output: C:\DaCapo\Hasil Extract\data01000
+   ```
+
+4. Klik **Unpack Archive**.
+5. Tunggu sampai log menampilkan `=== SELESAI ===`, lalu periksa folder `data01000`. Berkas hasil unpack harus berada di dalam folder tersebut.
+
+![Panduan unpack data01000.arc dengan Engine Target BGI / Ethornell](docs/images/01-unpack-data01000.png)
+
+Gambar panduan menunjukkan pilihan engine, lokasi arsip input, dan folder output. Sesuaikan lokasi folder dengan instalasi atau folder kerja masing-masing.
+
+Langkah unpack ini didokumentasikan berdasarkan panduan pengguna. Parameter repack, encoding teks, dan cara pemasangan patch untuk build game tertentu belum didokumentasikan atau diuji dalam unggahan ini. Jangan menganggap berkas `.bak` sebagai cadangan bersih tanpa memeriksanya terlebih dahulu.
 
 ## Status dan batas kompatibilitas
 
